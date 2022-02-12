@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#lines-container{
+    padding-left: 10px;
+    height: 95vh;
+    width: 95vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.line{
+    height: 11.11%;
+    display: flex;
+    flex-direction: row;
+}
+
+.line input{
+    width: 11.11%;
+    height: 100%;
+    border-radius: none;
+}
+
