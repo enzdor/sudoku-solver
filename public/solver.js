@@ -1,6 +1,16 @@
 b = null;
 
-
+bd1 = [
+    [b,b,b,b,b,3,b,b,b],
+    [b,b,b,b,b,b,b,b,b],
+    [b,b,b,b,b,b,b,b,b],
+    [b,b,b,b,b,b,b,b,b],
+    [b,b,b,1,b,b,b,b,b],
+    [b,b,b,b,b,b,b,b,b],
+    [b,b,b,b,b,b,b,b,b],
+    [b,b,b,b,b,b,b,b,b],
+    [b,b,b,b,b,b,b,b,b],
+]
 
 function solve(board){
     if (solved(board)){
@@ -126,5 +136,5 @@ function boxesGood (board){
     return true
 }
 
-
-console.log(solve(bd2));
+console.log(bd1);
+console.log(solve(bd1));
