@@ -152,31 +152,31 @@ const mainController = {
             }
         }
 
-
-        
-        console.log(solve(board));
         let bd1 = solve(board)
-        console.log(bd1);
 
-        let solution1 = []
+        if (bd1) {
+            let solution1 = []
 
-        for (let i = 0; i < 9; i++) {
-            let a = bd1.shift()
-            for (let j = 0; j < 9; j++) {
-                solution1.push(a.shift())
+            for (let i = 0; i < 9; i++) {
+                let a = bd1.shift()
+                for (let j = 0; j < 9; j++) {
+                    solution1.push(a.shift())
+                }
             }
+
+            for (let i = 0; i < solution1.length; i++) {
+                solution1[i] = solution1[i].toString()
+            }
+
+
+            let solution = {...solution1}
+
+            res.render('result', {solution})
+            return
+        } else {
+            let solution = []
+            res.render('result', {solution})
         }
-
-        for (let i = 0; i < solution1.length; i++) {
-            solution1[i] = solution1[i].toString()
-        }
-
-
-        let solution = {...solution1}
-
-        console.log(solution);
-
-        res.render('result', {solution})
     }
 }
 

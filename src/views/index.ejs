@@ -5,123 +5,131 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
     <title>Sudoku!</title>
 </head>
 <body>
-    <header>Sudoku!</header>
+    <header>
+        <h1><a href="/">Sudoku!</a></h1>
+    </header>
     <main>
         <form action="/" method="post">
-            <div id="lines-container">
-                <div class="line">
-                    <!-- First line -->
-                    <input type="number" name="1" id="1" class="top left">
-                    <input type="number" name="2" id="2" class="top">
-                    <input type="number" name="3" id="3" class="top">
-                    <input type="number" name="4" id="4" class="top left">
-                    <input type="number" name="5" id="5" class="top">
-                    <input type="number" name="6" id="6" class="top">
-                    <input type="number" name="7" id="7" class="top left">
-                    <input type="number" name="8" id="8" class="top">
-                    <input type="number" name="9" id="9" class="top right">
+            <div id="lines-outer-edge">
+                <div id="lines-container">
+                    <div class="line">
+                        <!-- First line -->
+                        <input type="number" name="1" id="1" class="top left" min="1" max="9">
+                        <input type="number" name="2" id="2" class="top" min="1" max="9">
+                        <input type="number" name="3" id="3" class="top" min="1" max="9">
+                        <input type="number" name="4" id="4" class="top left" min="1" max="9">
+                        <input type="number" name="5" id="5" class="top" min="1" max="9">
+                        <input type="number" name="6" id="6" class="top" min="1" max="9">
+                        <input type="number" name="7" id="7" class="top left" min="1" max="9">
+                        <input type="number" name="8" id="8" class="top" min="1" max="9">
+                        <input type="number" name="9" id="9" class="top right" min="1" max="9">
+                    </div>
+                    <div class="line">
+                        <!-- Second line -->
+                        <input type="number" name="10" id="10" class="left" min="1" max="9">
+                        <input type="number" name="11" id="11" class="" min="1" max="9">
+                        <input type="number" name="12" id="12" class="" min="1" max="9">
+                        <input type="number" name="13" id="13" class="left" min="1" max="9">
+                        <input type="number" name="14" id="14" class="" min="1" max="9">
+                        <input type="number" name="15" id="15" class="" min="1" max="9">
+                        <input type="number" name="16" id="16" class="left" min="1" max="9">
+                        <input type="number" name="17" id="17" class="" min="1" max="9">
+                        <input type="number" name="18" id="18" class="right" min="1" max="9">
+                    </div>
+                    <div class="line">
+                        <!-- Third line -->
+                        <input type="number" name="19" id="19" class="left" min="1" max="9">
+                        <input type="number" name="20" id="20" class="" min="1" max="9">
+                        <input type="number" name="21" id="21" class="" min="1" max="9">
+                        <input type="number" name="22" id="22" class="left" min="1" max="9">
+                        <input type="number" name="23" id="23" class="" min="1" max="9">
+                        <input type="number" name="24" id="24" class="" min="1" max="9">
+                        <input type="number" name="25" id="25" class="left" min="1" max="9">
+                        <input type="number" name="26" id="26" class="" min="1" max="9">
+                        <input type="number" name="27" id="27" class="right" min="1" max="9">
+                    </div>
+                    <div class="line">
+                        <!-- Fourth line -->
+                        <input type="number" name="28" id="28" class="top left" min="1" max="9">
+                        <input type="number" name="29" id="29" class="top" min="1" max="9">
+                        <input type="number" name="30" id="30" class="top" min="1" max="9">
+                        <input type="number" name="31" id="31" class="top left" min="1" max="9">
+                        <input type="number" name="32" id="32" class="top" min="1" max="9">
+                        <input type="number" name="33" id="33" class="top" min="1" max="9">
+                        <input type="number" name="34" id="34" class="top left" min="1" max="9">
+                        <input type="number" name="35" id="35" class="top" min="1" max="9">
+                        <input type="number" name="36" id="36" class="top right" min="1" max="9">
+                    </div>
+                    <div class="line">
+                        <!-- Fifth line -->
+                        <input type="number" name="37" id="37" class="left" min="1" max="9">
+                        <input type="number" name="38" id="38" class="" min="1" max="9">
+                        <input type="number" name="39" id="39" class="" min="1" max="9">
+                        <input type="number" name="40" id="40" class="left" min="1" max="9">
+                        <input type="number" name="41" id="41" class="" min="1" max="9">
+                        <input type="number" name="42" id="42" class="" min="1" max="9">
+                        <input type="number" name="43" id="43" class="left" min="1" max="9">
+                        <input type="number" name="44" id="44" class="" min="1" max="9">
+                        <input type="number" name="45" id="45" class="right" min="1" max="9">
+                    </div>
+                    <div class="line">
+                        <!-- Sixth line -->
+                        <input type="number" name="46" id="46" class="left" min="1" max="9">
+                        <input type="number" name="47" id="47" class="" min="1" max="9">
+                        <input type="number" name="48" id="48" class="" min="1" max="9">
+                        <input type="number" name="49" id="49" class="left" min="1" max="9">
+                        <input type="number" name="50" id="50" class="" min="1" max="9">
+                        <input type="number" name="51" id="51" class="" min="1" max="9">
+                        <input type="number" name="52" id="52" class="left" min="1" max="9">
+                        <input type="number" name="53" id="53" class="" min="1" max="9">
+                        <input type="number" name="54" id="54" class="right" min="1" max="9">
+                    </div>
+                    <div class="line">
+                        <!-- Seventh Line -->
+                        <input type="number" name="55" id="55" class="top left" min="1" max="9">     
+                        <input type="number" name="56" id="56" class="top" min="1" max="9">     
+                        <input type="number" name="57" id="57" class="top" min="1" max="9">     
+                        <input type="number" name="58" id="58" class="top left" min="1" max="9">     
+                        <input type="number" name="59" id="59" class="top" min="1" max="9">     
+                        <input type="number" name="60" id="60" class="top" min="1" max="9">
+                        <input type="number" name="61" id="61" class="top left" min="1" max="9">
+                        <input type="number" name="62" id="62" class="top" min="1" max="9">
+                        <input type="number" name="63" id="63" class="top right" min="1" max="9">
+                    </div>
+                    <div class="line">
+                        <!-- Eight line -->
+                        <input type="number" name="64" id="64" class="left" min="1" max="9">
+                        <input type="number" name="65" id="65" class="" min="1" max="9">
+                        <input type="number" name="66" id="66" class="" min="1" max="9">
+                        <input type="number" name="67" id="67" class="left" min="1" max="9">
+                        <input type="number" name="68" id="68" class="" min="1" max="9">
+                        <input type="number" name="69" id="69" class="" min="1" max="9">
+                        <input type="number" name="70" id="70" class="left" min="1" max="9">
+                        <input type="number" name="71" id="71" class="" min="1" max="9">
+                        <input type="number" name="72" id="72" class="right" min="1" max="9">
+                    </div>
+                    <div class="line">
+                        <!-- Ninth line -->
+                        <input type="number" name="73" id="73" class="bottom left" min="1" max="9">
+                        <input type="number" name="74" id="74" class="bottom" min="1" max="9">
+                        <input type="number" name="75" id="75" class="bottom" min="1" max="9">
+                        <input type="number" name="76" id="76" class="bottom left" min="1" max="9">
+                        <input type="number" name="77" id="77" class="bottom" min="1" max="9">
+                        <input type="number" name="78" id="78" class="bottom" min="1" max="9">
+                        <input type="number" name="79" id="79" class="bottom left" min="1" max="9">
+                        <input type="number" name="80" id="80" class="bottom" min="1" max="9">
+                        <input type="number" name="81" id="81" class="bottom right" min="1" max="9">
+                    </div>
                 </div>
-                <div class="line">
-                    <!-- Second line -->
-                    <input type="number" name="10" id="10" class="left">
-                    <input type="number" name="11" id="11" class="">
-                    <input type="number" name="12" id="12" class="">
-                    <input type="number" name="13" id="13" class="left">
-                    <input type="number" name="14" id="14" class="">
-                    <input type="number" name="15" id="15" class="">
-                    <input type="number" name="16" id="16" class="left">
-                    <input type="number" name="17" id="17" class="">
-                    <input type="number" name="18" id="18" class="right">
-                </div>
-                <div class="line">
-                    <!-- Third line -->
-                    <input type="number" name="19" id="19" class="left">
-                    <input type="number" name="20" id="20" class="">
-                    <input type="number" name="21" id="21" class="">
-                    <input type="number" name="22" id="22" class="left">
-                    <input type="number" name="23" id="23" class="">
-                    <input type="number" name="24" id="24" class="">
-                    <input type="number" name="25" id="25" class="left">
-                    <input type="number" name="26" id="26" class="">
-                    <input type="number" name="27" id="27" class="right">
-                </div>
-                <div class="line">
-                    <!-- Fourth line -->
-                    <input type="number" name="28" id="28" class="top left">
-                    <input type="number" name="29" id="29" class="top">
-                    <input type="number" name="30" id="30" class="top">
-                    <input type="number" name="31" id="31" class="top left">
-                    <input type="number" name="32" id="32" class="top">
-                    <input type="number" name="33" id="33" class="top">
-                    <input type="number" name="34" id="34" class="top left">
-                    <input type="number" name="35" id="35" class="top">
-                    <input type="number" name="36" id="36" class="top right">
-                </div>
-                <div class="line">
-                    <!-- Fifth line -->
-                    <input type="number" name="37" id="37" class="left">
-                    <input type="number" name="38" id="38" class="">
-                    <input type="number" name="39" id="39" class="">
-                    <input type="number" name="40" id="40" class="left">
-                    <input type="number" name="41" id="41" class="">
-                    <input type="number" name="42" id="42" class="">
-                    <input type="number" name="43" id="43" class="left">
-                    <input type="number" name="44" id="44" class="">
-                    <input type="number" name="45" id="45" class="right">
-                </div>
-                <div class="line">
-                    <!-- Sixth line -->
-                    <input type="number" name="46" id="46" class="left">
-                    <input type="number" name="47" id="47" class="">
-                    <input type="number" name="48" id="48" class="">
-                    <input type="number" name="49" id="49" class="left">
-                    <input type="number" name="50" id="50" class="">
-                    <input type="number" name="51" id="51" class="">
-                    <input type="number" name="52" id="52" class="left">
-                    <input type="number" name="53" id="53" class="">
-                    <input type="number" name="54" id="54" class="right">
-                </div>
-                <div class="line">
-                    <!-- Seventh Line -->
-                    <input type="number" name="55" id="55" class="top left">     
-                    <input type="number" name="56" id="56" class="top">     
-                    <input type="number" name="57" id="57" class="top">     
-                    <input type="number" name="58" id="58" class="top left">     
-                    <input type="number" name="59" id="59" class="top">     
-                    <input type="number" name="60" id="60" class="top">
-                    <input type="number" name="61" id="61" class="top left">
-                    <input type="number" name="62" id="62" class="top">
-                    <input type="number" name="63" id="63" class="top right">
-                </div>
-                <div class="line">
-                    <!-- Eight line -->
-                    <input type="number" name="64" id="64" class="left">
-                    <input type="number" name="65" id="65" class="">
-                    <input type="number" name="66" id="66" class="">
-                    <input type="number" name="67" id="67" class="left">
-                    <input type="number" name="68" id="68" class="">
-                    <input type="number" name="69" id="69" class="">
-                    <input type="number" name="70" id="70" class="left">
-                    <input type="number" name="71" id="71" class="">
-                    <input type="number" name="72" id="72" class="right">
-                </div>
-                <div class="line">
-                    <!-- Ninth line -->
-                    <input type="number" name="73" id="73" class="bottom left">
-                    <input type="number" name="74" id="74" class="bottom">
-                    <input type="number" name="75" id="75" class="bottom">
-                    <input type="number" name="76" id="76" class="bottom left">
-                    <input type="number" name="77" id="77" class="bottom">
-                    <input type="number" name="78" id="78" class="bottom">
-                    <input type="number" name="79" id="79" class="bottom left">
-                    <input type="number" name="80" id="80" class="bottom">
-                    <input type="number" name="81" id="81" class="bottom right">
-                </div>
+                <button type="submit" id="submit">Submit</button>
             </div>
-            <input type="submit" name="" id="">
         </form>
     </main>
 </body>
